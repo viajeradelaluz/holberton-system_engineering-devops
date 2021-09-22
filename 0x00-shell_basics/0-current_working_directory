@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "/tmp/correction/7175983990980215602053959315308807586306_2/205/3815/0x00-shell_basics"
+echo $PWD
