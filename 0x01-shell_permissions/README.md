@@ -28,7 +28,7 @@ This project is focused on learning what the commands `chmod`, `sudo`, `su`, `ch
 
 - **9. John Doe** — ``9-John_Doe`` — Write a script that sets the mode of the file `hello` to this:
 
-  ```html
+  ```bash
   -rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
   ```
 
@@ -38,4 +38,12 @@ This project is focused on learning what the commands `chmod`, `sudo`, `su`, `ch
 
 - **12. More directories** — ``112-directory_permissions`` — Create a script that creates a directory called `my_dir` with permissions 751 in the working directory.
 
-- **13. Change group** — ``13-change_group`` — Write a script that changes the group owner to `school` for the file `hello
+- **13. Change group** — ``13-change_group`` — Write a script that changes the group owner to `school` for the file `hello`.
+
+- **14. Owner and group** — ``100-change_owner_and_group`` — Write a script that changes the owner to `vincent` and the group owner to `staff` for all the files and directories in the working directory.
+
+- **15. Symbolic links** — ``101-symbolic_link_permissions`` — Write a script that changes the owner and the group owner of `_hello` to `vincent` and `staff` respectively.
+
+- **16. If only ** — ``102-if_only`` — Write a script that changes the owner of the file `hello` to `vincent` only if it is owned by the user `guillaume`.
+
+- **17. Star Wars** — ``103-Star_Wars`` — Write a script that will play the StarWars IV episode in the terminal.
