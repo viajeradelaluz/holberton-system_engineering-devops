@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | sed -n '1~2p'
+ls -1 | cat -n | grep -v $'[02468]\t' | cut -d $'\t' -f2
