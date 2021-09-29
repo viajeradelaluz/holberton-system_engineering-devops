@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -path "*/*" -type f,d -empty | cut -d '/' -f1
+find . -empty | cut -d '/' -f2
