@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Solution of Task 0. Give me a page!
+# Command to run Apache on the container Docker and to return a page
+# containig Hello Holberton when querying the root of it.
+
+docker exec -it container-name service apache2 start
