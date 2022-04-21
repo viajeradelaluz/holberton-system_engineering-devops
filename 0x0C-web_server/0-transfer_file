@@ -16,7 +16,7 @@ declare username=$3
 declare ssh_key=$4
 
 if [[ $# -eq 4 ]]; then
-    scp -i "$ssh_key" "$file" "$username"@"$ip":
+    scp -i "$ssh_key" -o StrictHostKeyChecking=no "$file" "$username"@"$ip":
 else
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 fi
