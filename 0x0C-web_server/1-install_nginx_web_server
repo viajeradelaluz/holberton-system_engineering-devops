@@ -7,9 +7,10 @@
 #   above requirements (this script will be run on the server itself)
 # - You can’t use systemctl for restarting nginx
 
-sudo apt -y update
-sudo apt install -y --allow-downgrades nginx
-sudo ufw allow 'Nginx HTTP'
-echo "Hello World!" > index.html
-sudo mv index.html /var/www/html/
+if [ ! -x /usr/sbin/nginx ]; then
+    sudo apt -y update
+    sudo apt install -y --allow-downgrades nginx
+    sudo ufw allow 'Nginx HTTP'
+fi
+echo "Hello World!" | sudo tee /var/www/html/index.html
 sudo service nginx start
