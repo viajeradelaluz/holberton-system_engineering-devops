@@ -3,4 +3,5 @@
 # Command to run Apache on the container Docker and to return a page
 # containig Hello Holberton when querying the root of it.
 
-docker exec -it container-name service apache2 start
+# docker exec -it [container-name] service apache2 start
+service apache2 start
