@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Using what you did for task #0, make your Bash script 5 lines long or less
+sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+kill -9 "$(cat /run/nginx.pid)"
