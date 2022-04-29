@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Install and configure HAproxy on your lb-01 server
+
+# Install HAproxy
+if [ ! -x "$(haproxy -version)" ]; then
+    sudo apt update && sudo apt upgrade -y
+    sudo apt -y install haproxy
+fi
+
+# Make sure HAproxy can be managed via an init script
+sudo sed -i "s/ENABLED=0/ENABLED=1/" /etc/default/haproxy
+
+# Backup the original config file
+sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
+
+# Configure HAproxy so that it sends traffic to web-01 and web-02 & distributes with roundrobin
+sudo sed -i "$ a\listen holbie3815 \n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\tserver 3815-web-01 52.201.246.143:80 check\n\tserver 3815-web-02 18.234.216.100:80 check" /etc/haproxy/haproxy.cfg
+sudo service haproxy start
