@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Script that displays information about subdomains
+
+# domain="$1" | subdomain="$2" | SDM="$2"
+subdomainInfo () {
+    dig "$2"."$1" | awk -v SDM="$2" '/ANSWER SECTION:/{getline; print "The subdomain " SDM " is a " $4 " record and points to " $5}'
+}
+
+for SDM in "www" "lb-01" "web-01" "web-02"; do
+    if [ "$SDM" == "$2" ] || [ -z "$2" ]; then
+        subdomainInfo "$1" "$SDM"
+    fi
+done
