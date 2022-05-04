@@ -7,7 +7,9 @@
 **Read or watch**
 
 - [How To Setup a Firewall with UFW on an Ubuntu and Debian Cloud Server](https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server)
-
+- [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+- [[Basic] "Forward" a port with UFW](https://help.skysilk.com/support/solutions/articles/9000182486--basic-forward-a-port-with-ufw-in-ubuntu-18-04-linux)
+- -[IP Masquerading](https://linuxize.com/post/how-to-setup-a-firewall-with-ufw-on-ubuntu-20-04/)
 ## Tasks
 
 ### **0. Block all incoming traffic but**
