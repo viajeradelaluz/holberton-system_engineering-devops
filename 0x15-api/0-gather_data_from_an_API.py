@@ -26,12 +26,12 @@ def main():
     todos = requests.get('{}{}/todos'.format(url, argv[1])).json()
 
     done_task = [task.get('title') for task in todos
-                 if task['completed'] is True]
+                 if task.get('completed') is True]
 
     print('Employee {} is done with tasks({}/{}):'
           .format(users['name'], len(done_task), len(todos)))
     for title in done_task:
-        print('\t{}'.format(title))
+        print('\t {}'.format(title))
 
 
 if __name__ == "__main__":
