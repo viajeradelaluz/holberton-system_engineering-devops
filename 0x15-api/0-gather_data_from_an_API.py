@@ -16,8 +16,8 @@ about his/her TODO list progress.
 REST API: https://jsonplaceholder.typicode.com/
 """
 
-from sys import argv
 import requests
+from sys import argv
 
 
 def main():
