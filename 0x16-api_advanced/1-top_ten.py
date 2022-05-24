@@ -20,7 +20,7 @@ import requests
 def top_ten(subreddit):
     """ Prints the titles of the first 10 hot posts of a given subreddit """
     headers = {'User-Agent': 'viajeradelaluz'}
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
     call = requests.get(url, headers=headers, allow_redirects=False)
 
     if call.status_code != 200:
@@ -28,9 +28,5 @@ def top_ten(subreddit):
         return
 
     posts = call.json().get('data').get('children')
-    if not posts:
-        print('None')
-        return
-
     for post in posts:
         print(post.get('data').get('title'))
